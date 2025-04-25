@@ -369,6 +369,84 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCurriculumCurriculum extends Struct.CollectionTypeSchema {
+  collectionName: 'curricula';
+  info: {
+    description: '';
+    displayName: 'Curriculum';
+    pluralName: 'curricula';
+    singularName: 'curriculum';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Cidade: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    CursosLivres: Schema.Attribute.Component<'curso-livre.curso-livre', true>;
+    Email: Schema.Attribute.Email;
+    Experiencia: Schema.Attribute.Component<'experiencia.experiencia', true>;
+    Formacao: Schema.Attribute.Component<'formacao.formacao', false>;
+    GitProfile: Schema.Attribute.String;
+    HardSkills: Schema.Attribute.Component<'skills.soft-skill', true>;
+    Idioma: Schema.Attribute.Component<'skills.soft-skill', true>;
+    LinkedinLink: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::curriculum.curriculum'
+    > &
+      Schema.Attribute.Private;
+    Nome: Schema.Attribute.String;
+    Objetivos: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    Resumo: Schema.Attribute.Text;
+    SoftSkills: Schema.Attribute.Component<'skills.soft-skill', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPortfolioEntryPortfolioEntry
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'portfolio_entries';
+  info: {
+    displayName: 'PortfolioEntry';
+    pluralName: 'portfolio-entries';
+    singularName: 'portfolio-entry';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    LinkGit: Schema.Attribute.String;
+    LInkProduction: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::portfolio-entry.portfolio-entry'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Resumo: Schema.Attribute.RichText;
+    Tecnologias: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPostPost extends Struct.CollectionTypeSchema {
   collectionName: 'posts';
   info: {
@@ -907,6 +985,8 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::curriculum.curriculum': ApiCurriculumCurriculum;
+      'api::portfolio-entry.portfolio-entry': ApiPortfolioEntryPortfolioEntry;
       'api::post.post': ApiPostPost;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_skills_soft_skills",
+  "info": {
+    "displayName": "SoftSkill"
+  },
+  "options": {},
+  "attributes": {
+    "Skill": {
+      "type": "string"
+    },
+    "Nivel": {
+      "type": "string"
+    }
+  }
+}

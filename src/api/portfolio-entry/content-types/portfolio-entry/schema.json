@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolio_entries",
+  "info": {
+    "singularName": "portfolio-entry",
+    "pluralName": "portfolio-entries",
+    "displayName": "PortfolioEntry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Tecnologias": {
+      "type": "text"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Resumo": {
+      "type": "richtext"
+    },
+    "LinkGit": {
+      "type": "string"
+    },
+    "LInkProduction": {
+      "type": "string"
+    }
+  }
+}

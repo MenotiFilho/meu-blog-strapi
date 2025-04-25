@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_formacao_formacaos",
+  "info": {
+    "displayName": "Formacao",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "Curso": {
+      "type": "string"
+    },
+    "Instituicao": {
+      "type": "string"
+    },
+    "Inicio": {
+      "type": "date"
+    },
+    "Fim": {
+      "type": "date"
+    },
+    "Cidade": {
+      "type": "string"
+    }
+  }
+}

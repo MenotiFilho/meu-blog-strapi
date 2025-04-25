@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_experiencia_experiencias",
+  "info": {
+    "displayName": "Experiencia",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "Cargo": {
+      "type": "string"
+    },
+    "Empresa": {
+      "type": "string"
+    },
+    "Atribuicoes": {
+      "type": "text"
+    },
+    "Inicio": {
+      "type": "date"
+    },
+    "Fim": {
+      "type": "date"
+    }
+  }
+}

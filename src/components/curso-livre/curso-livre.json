@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_curso_livre_curso_livres",
+  "info": {
+    "displayName": "CursoLivre"
+  },
+  "options": {},
+  "attributes": {
+    "Nome": {
+      "type": "string"
+    },
+    "Instituicao": {
+      "type": "string"
+    },
+    "Local": {
+      "type": "string"
+    },
+    "Inicio": {
+      "type": "date"
+    },
+    "Fim": {
+      "type": "date"
+    },
+    "Resumo": {
+      "type": "text"
+    }
+  }
+}

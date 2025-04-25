@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "curricula",
+  "info": {
+    "singularName": "curriculum",
+    "pluralName": "curricula",
+    "displayName": "Curriculum",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nome": {
+      "type": "string"
+    },
+    "Cidade": {
+      "type": "string"
+    },
+    "Resumo": {
+      "type": "text"
+    },
+    "Objetivos": {
+      "type": "text"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "GitProfile": {
+      "type": "string"
+    },
+    "Experiencia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "experiencia.experiencia"
+    },
+    "LinkedinLink": {
+      "type": "string"
+    },
+    "Formacao": {
+      "displayName": "Formacao",
+      "type": "component",
+      "repeatable": false,
+      "component": "formacao.formacao"
+    },
+    "SoftSkills": {
+      "displayName": "SoftSkill",
+      "type": "component",
+      "repeatable": true,
+      "component": "skills.soft-skill"
+    },
+    "HardSkills": {
+      "type": "component",
+      "repeatable": true,
+      "component": "skills.soft-skill"
+    },
+    "Idioma": {
+      "type": "component",
+      "repeatable": true,
+      "component": "skills.soft-skill"
+    },
+    "CursosLivres": {
+      "displayName": "CursoLivre",
+      "type": "component",
+      "repeatable": true,
+      "component": "curso-livre.curso-livre"
+    }
+  }
+}
