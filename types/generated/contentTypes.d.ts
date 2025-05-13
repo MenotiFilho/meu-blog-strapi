@@ -414,6 +414,7 @@ export interface ApiPortfolioEntryPortfolioEntry
   extends Struct.CollectionTypeSchema {
   collectionName: 'portfolio_entries';
   info: {
+    description: '';
     displayName: 'PortfolioEntry';
     pluralName: 'portfolio-entries';
     singularName: 'portfolio-entry';
@@ -439,6 +440,7 @@ export interface ApiPortfolioEntryPortfolioEntry
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     Resumo: Schema.Attribute.RichText;
+    slug: Schema.Attribute.UID<'Title'>;
     Tecnologias: Schema.Attribute.Text;
     Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
